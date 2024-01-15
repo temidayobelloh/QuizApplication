@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="instructions">
+        <h2> Quiz App</h2>
+        <br>
+        <h4><i>Instructions:</i></h4>
+        <p>Welcome to the Quiz!</p>
+        <p>Ensure you read each question carefully and select the correct answer. <br> You have <b>3 Minutes</b> to complete the quiz.<br> GOODLUCK!</p>
+        <button class="Btn" id="startQuiz" onclick="startQuiz()">Start Quiz</button>
+        <button class="cancelBtn" id="quitQuiz" onclick="cancelQuiz()">Cancel</button>
+
+    </div>
+    <div id="quizContainer" style="display: none;">
+        <p id="timer"></p>
+        <div id="question"></div>
+        <div id="options"></div>
+        <p id="feedback"></p>
+        <div><p id="result"></p></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
