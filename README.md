@@ -5,6 +5,7 @@ This application is built using JavaScript, HTML, and CSS to create an interacti
 
 
 Features:
+
 a. Feedback System:
    - The feedback system provides immediate indications when the user selects a correct option. This helps users track their progress and boosts their confidence.
    - By using JavaScript, users can dynamically update the user interface to display visual cues, such as changing the color of the selected option or showing a feedback.
