@@ -83,14 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultElement.textContent = `Quiz completed! Your score: ${score} out of ${Quiz.length}.`;
     }
-
-    function showRestartButton() {
-        const restartButton = document.createElement("button");
-        restartButton.textContent = "Restart Quiz";
-        restartButton.addEventListener("click", restartQuiz);
-        resultElement.appendChild(restartButton);
-    }
-
     function restartQuiz() {
         quizFinished = false;
         currentQuestionIndex = 0;
@@ -99,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         startQuiz(); // Restart the quiz
     }
 
-    function formatTime(seconds) {
+    function formatTime(seconds){
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
         return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}s`;
@@ -132,3 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
         { question: "10. How do you access the length of an array in JavaScript?", options: ["A. array.length()", "B. array.length", "C. array.size()", "D. array.size"], correct: 1 },
     ];
 });
+
