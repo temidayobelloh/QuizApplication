@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional quiz application to test your knowledge.">
     <title>Quiz Application</title>
-    <link rel="stylesheet" href="quiz.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="quiz.css">
 </head>
-<body>
-    <div id="instructions">
-        <h2> Quiz App</h2>
-        <br>
-        <h4><i>Instructions:</i></h4>
-        <p>Welcome to the Quiz!</p>
-        <p>Ensure you read each question carefully and select the correct answer. <br> You have <b>3 Minutes</b> to complete the quiz.<br> GOODLUCK!</p>
-        <button class="Btn" id="startQuiz" onclick="startQuiz()">Start Quiz</button>
-        <button class="cancelBtn" id="quitQuiz" onclick="cancelQuiz()">Cancel</button>
 
-    </div>
-    <div id="quizContainer" style="display: none;">
-        <p id="timer"></p>
-        <div id="question"></div>
-        <div id="options"></div>
-        <p id="feedback"></p>
-        <div><p id="result"></p></div>
-    </div>
+<body>
+    <main>
+        <section id="instructions">
+            <h2>Quiz Application</h2>
+            <br>
+            <h4><i>Instructions:</i></h4>
+            <p>Welcome to the Quiz! Ensure you read each question carefully and select the correct answer. <br> You have
+                <strong>3 Minutes</strong> to complete the quiz. <br> GOOD LUCK!</p>
+            <button class="btn btn-start" id="startQuiz" onclick="startQuiz()">Start Quiz</button>
+            <button class="btn btn-cancel" id="quitQuiz" onclick="cancelQuiz()">Cancel</button>
+        </section>
+
+        <section id="quizContainer" style="display: none;" aria-hidden="true">
+            <p id="timer" aria-live="polite"></p>
+            <div id="question"></div>
+            <div id="options"></div>
+            <p id="feedback" aria-live="assertive"></p>
+            <div><p id="result"></p></div>
+        </section>
+    </main>
     <script src="quiz.js"></script>
 </body>
+
 </html>
